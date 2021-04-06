@@ -1,8 +1,13 @@
 # splunk_download
 
-This Bash script downloads the latest version of Splunk Enterprise and the Splunk Universal Forwarder.
+This Bash script downloads the latest Splunk version to the current directory..
 
-The following installers are supported:
+The following platforms are supported (1st command line argument):
+
+- Splunk Enterprise ("full")
+- Splunk Universal Forwarder ("uf")
+
+The following installers are supported (2nd command line argument):
 
 - rpm
 - tgz
