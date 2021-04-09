@@ -1,4 +1,4 @@
-# splunk_download
+# splunk_downloader
 
 This Bash script downloads the latest Splunk version to the current directory..
 
