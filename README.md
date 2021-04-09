@@ -1,6 +1,6 @@
 # splunk_downloader
 
-This Bash script downloads the latest Splunk version to the current directory..
+This Bash script downloads the latest Splunk version to the current directory using `wget`.
 
 The following platforms are supported (1st command line argument):
 
