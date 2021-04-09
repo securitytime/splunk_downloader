@@ -6,8 +6,8 @@ This script requires two command line arguments:
 
 1. Splunk platform: full | uf
 
-- full stands for Splunk Enterprise.
-- uf stands for Universal Forwarder.
+  - full stands for Splunk Enterprise.
+  - uf stands for Universal Forwarder.
 
 2. Installer: rpm | tgz | deb | msi
 
