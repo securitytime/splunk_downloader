@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Depending on the user input, this script will download Splunk Enterprise or the Universal Forwarder from splunk.com.
-# Furthermore, the user can choose to download the installer either in the RPM, TGZ or MSI format.
+# Furthermore, the user can choose to download the installer either in the RPM, TGZ, DEB or MSI format.
 # The download will be placed inside the current directory.
 
 usage(){
