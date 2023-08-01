@@ -1,16 +1,11 @@
+
 # splunk_downloader
 
 This Bash script downloads the latest Splunk version to the current directory using `wget`.
 
-This script requires two command line arguments:
+For downloading Splunk Enterprise installers, use **full** as first command line argument. For Universal Forwarder installers, use **uf** instead.
 
-1. Splunk platform: full | uf
-
-  - full stands for Splunk Enterprise.
-  - uf stands for Universal Forwarder.
-
-2. Installer: rpm | tgz | deb | msi
-
+The second command line argument specifies the platform. Currently supported by this script are RPM, TGZ and DEB for Linux and MSI for Windows.
 
 ## Usage
 
