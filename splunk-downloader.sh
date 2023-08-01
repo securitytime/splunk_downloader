@@ -4,6 +4,10 @@
 # Furthermore, the user can choose to download the installer either in the RPM, TGZ, DEB or MSI format.
 # The download will be placed inside the current directory.
 
+# For troubleshooting, use these commands:
+# curl "https://www.splunk.com/en_us/download/splunk-enterprise.html" | grep "data-link"
+# curl "https://www.splunk.com/en_us/download/universal-forwarder.html" | grep "data-link"
+
 usage(){
    echo "Usage: $0 [full|uf] [rpm|tgz|deb|msi]"
    echo "Example: $0 full rpm"
@@ -31,7 +35,7 @@ else
 fi
 
 content=`curl -s --connect-timeout 10 --max-time 10 $url`
-link=`echo $content | egrep -o "data-link=\"https://[^\"]+${link_tail}\"" | cut -c12- | rev | cut -c2- | rev`
+link=`echo $content | grep -E -o "data-link=\"https://[^\"]+${link_tail}\"" | cut -c12- | rev | cut -c2- | rev`
 if [[ "$link" == "https://"* ]]; then
    echo "Download link: $link"
    echo ""
