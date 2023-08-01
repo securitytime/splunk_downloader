@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Depending on the user input, this script will download Splunk Enterprise or the Universal Forwarder from splunk.com.
-# Furthermore, the user can choose to download the installer either in the RPM, TGZ, DEB or MSI format.
+# Furthermore, the user can choose to download the installer either in the RPM, TGZ or MSI format.
 # The download will be placed inside the current directory.
 
 usage(){
@@ -19,19 +19,19 @@ else
 fi
 
 if [ "$2" = "rpm" ]; then
-   link_tail="linux-2\.6-x86_64\.rpm"
+   link_tail="\.x86_64\.rpm"
 elif [ "$2" = "tgz" ]; then
-   link_tail="Linux-x86_64\.tgz"
+   link_tail="-Linux-x86_64\.tgz"
 elif [ "$2" = "deb" ]; then
-   link_tail="linux-2\.6-amd64\.deb"
+   link_tail="-linux-2\.6-amd64\.deb"
 elif [ "$2" = "msi" ]; then
-   link_tail="x64-release\.msi"
+   link_tail="-x64-release\.msi"
 else
    usage
 fi
 
 content=`curl -s --connect-timeout 10 --max-time 10 $url`
-link=`echo $content | egrep -o "data-link=\"https://[^\"]+-${link_tail}\"" | cut -c12- | rev | cut -c2- | rev`
+link=`echo $content | egrep -o "data-link=\"https://[^\"]+${link_tail}\"" | cut -c12- | rev | cut -c2- | rev`
 if [[ "$link" == "https://"* ]]; then
    echo "Download link: $link"
    echo ""
