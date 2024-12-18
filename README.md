@@ -34,7 +34,6 @@ https://download.splunk.com/products/splunk/releases/9.4.0/osx/splunk-9.4.0-6b4e
 Using this script in conjunction with wget to download the latest deb package:
 ```
 $ wget $(bash splunk-downloader.sh full | grep linux-amd64.deb)
-https://download.splunk.com/products/splunk/releases/9.4.0/linux/splunk-9.4.0-6b4ebe426ca6-linux-amd64.deb
 ```
 
 List all Universal Forwarder links:
