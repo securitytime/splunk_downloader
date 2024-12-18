@@ -1,4 +1,3 @@
-
 # splunk_downloader
 
 This Bash script list all download links for the latest version of Splunk Enterprise and the Universal Forwarder.
@@ -33,7 +32,7 @@ https://download.splunk.com/products/splunk/releases/9.4.0/osx/splunk-9.4.0-6b4e
 
 Using this script in conjunction with wget to download the latest deb package:
 ```
-$ wget $(bash splunk-downloader.sh full | grep linux-amd64.deb)
+$ wget `bash splunk-downloader.sh full | grep linux-amd64.deb`
 ```
 
 List all Universal Forwarder links:
